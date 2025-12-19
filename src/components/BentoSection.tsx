@@ -8,57 +8,30 @@ import mascot3 from "@/assets/mascot-3.png";
 import mascot4 from "@/assets/mascot-4.png";
 import { Sparkles, Heart, Star, Palette, PenTool, Layers } from "lucide-react";
 
-const skills = ["Graphic Designer", "Illustrator", "Mascot Design", "Cute / Cartoon Style", "Logo Design"];
-
-const projects = [
-  { title: "Logo Design", image: projectLogo, description: "Brand identities & visual marks", color: "bg-primary/20" },
-  { title: "Mascot Maker", image: projectMascot, description: "Character creation & design", color: "bg-secondary/20" },
-  { title: "Illustration", image: projectIllustration, description: "Digital art & visual stories", color: "bg-accent/20" }
-];
-
-const mascots = [
-  { name: "Bunny", image: mascot1, personality: "Friendly helper", color: "bg-primary/20" },
-  { name: "Neko", image: mascot2, personality: "Playful & curious", color: "bg-secondary/20" },
-  { name: "Dragon", image: mascot3, personality: "Cheerful buddy", color: "bg-cozy-sky/30" },
-  { name: "Bear", image: mascot4, personality: "Cozy explorer", color: "bg-accent/20" }
-];
-
-const principles = [
-  { icon: Sparkles, title: "Cute & Memorable", description: "Adorable characters with strong personalities", color: "bg-primary/20" },
-  { icon: Heart, title: "Design With Heart", description: "Every creation connects emotionally", color: "bg-secondary/20" },
-  { icon: Star, title: "Warm & Playful", description: "Friendly designs full of personality", color: "bg-accent/20" }
-];
-
-const software = [
-  { name: "Adobe Illustrator", icon: PenTool, color: "bg-primary/30" },
-  { name: "Adobe Photoshop", icon: Layers, color: "bg-cozy-sky/30" },
-  { name: "Procreate", icon: Palette, color: "bg-secondary/30" }
-];
-
 const BentoSection = () => {
   return (
-    <section className="relative px-4 md:px-8 lg:px-16 py-12 bg-background">
+    <section className="px-4 md:px-8 lg:px-16 py-12 bg-slate-900">
       <div className="mx-auto max-w-7xl">
-        {/* Bento Grid Layout */}
-        <div className="bento-grid grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
+        <div className="grid gap-5 grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
           
-          {/* Profile Card - Large */}
-          <div className="bento-item md:col-span-2 lg:col-span-3 bg-gradient-to-br from-primary/10 to-secondary/10">
+          {/* Profile Card */}
+          <div className="md:col-span-2 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
             <div className="flex flex-col md:flex-row items-center gap-6">
               <div className="flex-shrink-0">
-                <div className="relative">
-                  <div className="absolute -inset-3 rounded-full bg-primary/30 animate-pulse" />
-                  <img src={avatar} alt="Ali Zulfikar avatar" className="relative w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-primary/50 shadow-lg" />
-                </div>
+                <img 
+                  src={avatar} 
+                  alt="Ali Zulfikar avatar" 
+                  className="w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-teal-500" 
+                />
               </div>
               <div className="text-center md:text-left">
-                <h2 className="font-heading text-4xl md:text-5xl font-extrabold text-foreground">
+                <h2 className="text-4xl md:text-5xl font-bold text-white">
                   Hey! 👋
                 </h2>
-                <h3 className="font-heading text-2xl md:text-3xl font-bold text-primary mt-2">
+                <h3 className="text-2xl md:text-3xl font-bold text-teal-400 mt-2">
                   I'm Ali Zulfikar
                 </h3>
-                <p className="mt-3 text-muted-foreground leading-relaxed font-medium">
+                <p className="mt-3 text-slate-400 leading-relaxed">
                   Graphic designer & illustrator since 2019. Creating cool characters, mascots, and cartoon-style visuals! ⚡
                 </p>
               </div>
@@ -66,95 +39,155 @@ const BentoSection = () => {
           </div>
 
           {/* Skills Card */}
-          <div className="bento-item md:col-span-2 lg:col-span-3 bg-gradient-to-br from-accent/10 to-primary/10">
-            <h3 className="font-heading text-3xl font-extrabold text-foreground mb-5 flex items-center gap-2">
+          <div className="md:col-span-2 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
+            <h3 className="text-3xl font-bold text-white mb-5">
               Skills ⚡
             </h3>
             <ul className="space-y-3">
-              {skills.map((skill) => (
-                <li key={skill} className="skill-item">
-                  <span className="skill-dot" />
-                  <span>{skill}</span>
-                </li>
-              ))}
+              <li className="flex items-center gap-3 text-white font-bold text-lg">
+                <span className="w-3 h-3 rounded-full bg-teal-400" />
+                <span>Graphic Designer</span>
+              </li>
+              <li className="flex items-center gap-3 text-white font-bold text-lg">
+                <span className="w-3 h-3 rounded-full bg-teal-400" />
+                <span>Illustrator</span>
+              </li>
+              <li className="flex items-center gap-3 text-white font-bold text-lg">
+                <span className="w-3 h-3 rounded-full bg-teal-400" />
+                <span>Mascot Design</span>
+              </li>
+              <li className="flex items-center gap-3 text-white font-bold text-lg">
+                <span className="w-3 h-3 rounded-full bg-teal-400" />
+                <span>Cute / Cartoon Style</span>
+              </li>
+              <li className="flex items-center gap-3 text-white font-bold text-lg">
+                <span className="w-3 h-3 rounded-full bg-teal-400" />
+                <span>Logo Design</span>
+              </li>
             </ul>
           </div>
 
-          {/* Projects - 3 cards */}
-          {projects.map((project) => (
-            <div key={project.title} className="bento-item md:col-span-2 lg:col-span-2 p-0 overflow-hidden group cursor-pointer">
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={project.image} alt={project.title} className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                <div className={`absolute inset-0 ${project.color} opacity-0 group-hover:opacity-50 transition-opacity duration-300`} />
-              </div>
-              <div className="p-5">
-                <h3 className="font-heading text-xl font-bold text-foreground">
-                  {project.title}
-                </h3>
-                <p className="text-sm text-muted-foreground font-medium mt-1">
-                  {project.description}
-                </p>
-              </div>
+          {/* Project 1 */}
+          <div className="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 overflow-hidden">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img src={projectLogo} alt="Logo Design" className="h-full w-full object-cover" />
             </div>
-          ))}
-
-          {/* Mascots - Full Width Row */}
-          <div className="bento-item md:col-span-4 lg:col-span-6 bg-gradient-to-br from-secondary/10 to-primary/10">
-            <h3 className="font-heading text-3xl font-extrabold text-foreground mb-6 text-center">
-              My Mascots 🎨
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {mascots.map((mascot) => (
-                <div key={mascot.name} className={`${mascot.color} rounded-2xl p-4 text-center transition-all duration-300 hover:scale-105 border border-primary/20`}>
-                  <img src={mascot.image} alt={mascot.name} className="w-full aspect-square object-contain rounded-xl mb-3" />
-                  <h4 className="font-heading text-lg font-bold text-foreground">{mascot.name}</h4>
-                  <p className="text-sm text-muted-foreground font-medium">{mascot.personality}</p>
-                </div>
-              ))}
+            <div className="p-5">
+              <h3 className="text-xl font-bold text-white">Logo Design</h3>
+              <p className="text-sm text-slate-400 mt-1">Brand identities & visual marks</p>
             </div>
           </div>
 
-          {/* Design Philosophy */}
-          {principles.map((principle) => (
-            <div key={principle.title} className="bento-item md:col-span-2 text-center group">
-              <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl ${principle.color} border border-primary/30 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-6`}>
-                <principle.icon className="h-8 w-8 text-primary" />
-              </div>
-              <h3 className="font-heading text-xl font-bold text-foreground mb-2">
-                {principle.title}
-              </h3>
-              <p className="text-muted-foreground text-sm font-medium leading-relaxed">
-                {principle.description}
-              </p>
+          {/* Project 2 */}
+          <div className="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 overflow-hidden">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img src={projectMascot} alt="Mascot Maker" className="h-full w-full object-cover" />
             </div>
-          ))}
+            <div className="p-5">
+              <h3 className="text-xl font-bold text-white">Mascot Maker</h3>
+              <p className="text-sm text-slate-400 mt-1">Character creation & design</p>
+            </div>
+          </div>
+
+          {/* Project 3 */}
+          <div className="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 overflow-hidden">
+            <div className="aspect-[4/3] overflow-hidden">
+              <img src={projectIllustration} alt="Illustration" className="h-full w-full object-cover" />
+            </div>
+            <div className="p-5">
+              <h3 className="text-xl font-bold text-white">Illustration</h3>
+              <p className="text-sm text-slate-400 mt-1">Digital art & visual stories</p>
+            </div>
+          </div>
+
+          {/* Mascots Section */}
+          <div className="md:col-span-4 lg:col-span-6 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
+            <h3 className="text-3xl font-bold text-white mb-6 text-center">
+              My Mascots 🎨
+            </h3>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="bg-teal-900/50 rounded-2xl p-4 text-center border border-teal-500/20">
+                <img src={mascot1} alt="Bunny" className="w-full aspect-square object-contain rounded-xl mb-3" />
+                <h4 className="text-lg font-bold text-white">Bunny</h4>
+                <p className="text-sm text-slate-400">Friendly helper</p>
+              </div>
+              <div className="bg-purple-900/50 rounded-2xl p-4 text-center border border-purple-500/20">
+                <img src={mascot2} alt="Neko" className="w-full aspect-square object-contain rounded-xl mb-3" />
+                <h4 className="text-lg font-bold text-white">Neko</h4>
+                <p className="text-sm text-slate-400">Playful & curious</p>
+              </div>
+              <div className="bg-blue-900/50 rounded-2xl p-4 text-center border border-blue-500/20">
+                <img src={mascot3} alt="Dragon" className="w-full aspect-square object-contain rounded-xl mb-3" />
+                <h4 className="text-lg font-bold text-white">Dragon</h4>
+                <p className="text-sm text-slate-400">Cheerful buddy</p>
+              </div>
+              <div className="bg-amber-900/50 rounded-2xl p-4 text-center border border-amber-500/20">
+                <img src={mascot4} alt="Bear" className="w-full aspect-square object-contain rounded-xl mb-3" />
+                <h4 className="text-lg font-bold text-white">Bear</h4>
+                <p className="text-sm text-slate-400">Cozy explorer</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Philosophy 1 */}
+          <div className="md:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-900/50 border border-teal-500/30">
+              <Sparkles className="h-8 w-8 text-teal-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Cute & Memorable</h3>
+            <p className="text-slate-400 text-sm">Adorable characters with strong personalities</p>
+          </div>
+
+          {/* Philosophy 2 */}
+          <div className="md:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-900/50 border border-purple-500/30">
+              <Heart className="h-8 w-8 text-purple-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Design With Heart</h3>
+            <p className="text-slate-400 text-sm">Every creation connects emotionally</p>
+          </div>
+
+          {/* Philosophy 3 */}
+          <div className="md:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6 text-center">
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-900/50 border border-amber-500/30">
+              <Star className="h-8 w-8 text-amber-400" />
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Warm & Playful</h3>
+            <p className="text-slate-400 text-sm">Friendly designs full of personality</p>
+          </div>
 
           {/* Software Tools */}
-          <div className="bento-item md:col-span-4 lg:col-span-3 bg-gradient-to-br from-cozy-sky/10 to-primary/10">
-            <h3 className="font-heading text-3xl font-extrabold text-foreground mb-6">
+          <div className="md:col-span-4 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
+            <h3 className="text-3xl font-bold text-white mb-6">
               Tools I Use 🛠️
             </h3>
             <div className="flex flex-wrap gap-4">
-              {software.map((tool) => (
-                <div key={tool.name} className={`${tool.color} rounded-2xl px-5 py-4 flex items-center gap-3 transition-all duration-300 hover:scale-105 border border-primary/20`}>
-                  <tool.icon className="h-6 w-6 text-primary" />
-                  <span className="font-heading font-bold text-foreground">{tool.name}</span>
-                </div>
-              ))}
+              <div className="bg-teal-900/50 rounded-2xl px-5 py-4 flex items-center gap-3 border border-teal-500/20">
+                <PenTool className="h-6 w-6 text-teal-400" />
+                <span className="font-bold text-white">Adobe Illustrator</span>
+              </div>
+              <div className="bg-blue-900/50 rounded-2xl px-5 py-4 flex items-center gap-3 border border-blue-500/20">
+                <Layers className="h-6 w-6 text-blue-400" />
+                <span className="font-bold text-white">Adobe Photoshop</span>
+              </div>
+              <div className="bg-purple-900/50 rounded-2xl px-5 py-4 flex items-center gap-3 border border-purple-500/20">
+                <Palette className="h-6 w-6 text-purple-400" />
+                <span className="font-bold text-white">Procreate</span>
+              </div>
             </div>
           </div>
 
           {/* Contact Card */}
-          <div className="bento-item md:col-span-4 lg:col-span-3 bg-gradient-to-br from-primary/10 to-accent/10">
-            <h3 className="font-heading text-3xl font-extrabold text-foreground mb-4">
+          <div className="md:col-span-4 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
+            <h3 className="text-3xl font-bold text-white mb-4">
               Let's Connect! 💬
             </h3>
-            <p className="text-muted-foreground font-medium mb-6">
+            <p className="text-slate-400 mb-6">
               Have a project in mind? I'd love to hear from you!
             </p>
             <a 
               href="mailto:alizulfikar@email.com" 
-              className="btn-primary inline-flex items-center gap-2"
+              className="inline-flex items-center gap-2 bg-teal-500 text-slate-900 font-bold px-8 py-4 rounded-2xl hover:bg-teal-400 transition-colors"
             >
               📧 Send Me an Email
             </a>

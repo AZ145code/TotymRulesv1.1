@@ -4,17 +4,10 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background">
-      {/* SEO Meta */}
+    <main className="min-h-screen bg-slate-900">
       <title>Ali Zulfikar | Graphic Designer & Illustrator Portfolio</title>
-      
-      {/* Hero */}
       <HeroSection />
-      
-      {/* Bento Box Content */}
       <BentoSection />
-      
-      {/* Footer */}
       <Footer />
     </main>
   );
