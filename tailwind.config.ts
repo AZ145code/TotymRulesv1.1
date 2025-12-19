@@ -58,15 +58,15 @@ export default {
   		},
 		fontFamily: {
 			display: [
-				'BBH Bogle',
+				'BBH Hegarty',
 				'sans-serif'
 			],
 			heading: [
-				'BBH Bogle',
+				'BBH Hegarty',
 				'sans-serif'
 			],
 			body: [
-				'BBH Bogle',
+				'BBH Hegarty',
 				'sans-serif'
 			],
   			sans: [
