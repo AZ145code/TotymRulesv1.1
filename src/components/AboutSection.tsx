@@ -1,16 +1,7 @@
 import avatar from "@/assets/avatar.png";
-
-const skills = [
-  "Graphic Designer",
-  "Illustrator",
-  "Mascot Design",
-  "Cute / Cartoon Style",
-  "Logo Design",
-];
-
+const skills = ["Graphic Designer", "Illustrator", "Mascot Design", "Cute / Cartoon Style", "Logo Design"];
 const AboutSection = () => {
-  return (
-    <section className="relative px-6 py-20 md:px-12 lg:px-20">
+  return <section className="relative px-6 py-20 md:px-12 lg:px-20">
       <div className="mx-auto max-w-6xl">
         {/* Bento Grid */}
         <div className="grid gap-6 md:grid-cols-5">
@@ -20,11 +11,7 @@ const AboutSection = () => {
             <div className="flex-shrink-0">
               <div className="relative">
                 <div className="absolute -inset-2 rounded-full bg-gradient-to-r from-primary to-secondary opacity-20 blur-lg" />
-                <img 
-                  src={avatar} 
-                  alt="Ali Zulfikar Avatar" 
-                  className="relative h-32 w-32 md:h-40 md:w-40 rounded-2xl object-cover border-4 border-card-foreground"
-                />
+                
               </div>
             </div>
 
@@ -53,22 +40,16 @@ const AboutSection = () => {
               SKILL
             </h3>
             <ul className="space-y-3">
-              {skills.map((skill, index) => (
-                <li 
-                  key={skill} 
-                  className="skill-item justify-center md:justify-start"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+              {skills.map((skill, index) => <li key={skill} className="skill-item justify-center md:justify-start" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <span className="skill-dot" />
                   <span className="font-heading font-medium">{skill}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;
