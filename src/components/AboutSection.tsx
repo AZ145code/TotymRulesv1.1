@@ -1,10 +1,7 @@
 import avatar from "@/assets/avatar.png";
-
 const skills = ["Graphic Designer", "Illustrator", "Mascot Design", "Cute / Cartoon Style", "Logo Design"];
-
 const AboutSection = () => {
-  return (
-    <section className="relative px-6 py-20 md:px-12 lg:px-20">
+  return <section className="relative px-6 md:px-12 lg:px-20 bg-inherit py-0">
       <div className="mx-auto max-w-6xl">
         {/* Bento Grid */}
         <div className="grid gap-6 md:grid-cols-5">
@@ -14,11 +11,7 @@ const AboutSection = () => {
             <div className="flex-shrink-0">
               <div className="relative">
                 <div className="absolute -inset-3 rounded-full bg-cozy-peach opacity-50" />
-                <img 
-                  src={avatar} 
-                  alt="Ali Zulfikar avatar" 
-                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-card"
-                />
+                <img src={avatar} alt="Ali Zulfikar avatar" className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-card" />
               </div>
             </div>
 
@@ -46,22 +39,16 @@ const AboutSection = () => {
               Skills ⭐
             </h3>
             <ul className="space-y-3">
-              {skills.map((skill, index) => (
-                <li 
-                  key={skill} 
-                  className="skill-item justify-center md:justify-start"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+              {skills.map((skill, index) => <li key={skill} className="skill-item justify-center md:justify-start" style={{
+              animationDelay: `${index * 0.1}s`
+            }}>
                   <span className="skill-dot" />
                   <span className="font-heading font-semibold">{skill}</span>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default AboutSection;

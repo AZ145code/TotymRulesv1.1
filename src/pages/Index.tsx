@@ -4,10 +4,8 @@ import ProjectsSection from "@/components/ProjectsSection";
 import MascotShowcase from "@/components/MascotShowcase";
 import PhilosophySection from "@/components/PhilosophySection";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <main className="min-h-screen bg-background">
+  return <main className="min-h-screen bg-zinc-950">
       {/* SEO Meta */}
       <title>Ali Zulfikar | Graphic Designer & Illustrator Portfolio</title>
       
@@ -28,8 +26,6 @@ const Index = () => {
       
       {/* Footer */}
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;

@@ -1,8 +1,6 @@
 import { Mail, Instagram, Twitter, Heart } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="relative px-6 py-16 md:px-12 lg:px-20 border-t border-border bg-card">
+  return <footer className="relative px-6 py-16 md:px-12 lg:px-20 border-t border-border bg-inherit">
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo / Name */}
@@ -17,25 +15,13 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-3">
-            <a 
-              href="#" 
-              className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cozy-peach text-foreground transition-all duration-300 hover:scale-105"
-              aria-label="Email"
-            >
+            <a href="#" className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cozy-peach text-foreground transition-all duration-300 hover:scale-105" aria-label="Email">
               <Mail className="h-5 w-5" />
             </a>
-            <a 
-              href="#" 
-              className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cozy-lavender text-foreground transition-all duration-300 hover:scale-105"
-              aria-label="Instagram"
-            >
+            <a href="#" className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cozy-lavender text-foreground transition-all duration-300 hover:scale-105" aria-label="Instagram">
               <Instagram className="h-5 w-5" />
             </a>
-            <a 
-              href="#" 
-              className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cozy-mint text-foreground transition-all duration-300 hover:scale-105"
-              aria-label="Twitter"
-            >
+            <a href="#" className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cozy-mint text-foreground transition-all duration-300 hover:scale-105" aria-label="Twitter">
               <Twitter className="h-5 w-5" />
             </a>
           </div>
@@ -48,8 +34,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
