@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,32 +8,32 @@
 @layer base {
   :root {
     --background: 30 30% 96%;
-    --foreground: 25 25% 20%;
+    --foreground: 210 40% 98.0392%;
 
     --card: 0 0% 100%;
-    --card-foreground: 25 25% 20%;
+    --card-foreground: 173 80.3922% 40%;
 
     --popover: 30 30% 98%;
-    --popover-foreground: 25 25% 20%;
+    --popover-foreground: 222 47.3684% 11.1765%;
 
-    --primary: 350 60% 70%;
+    --primary: 171 76.9231% 64.3137%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 180 40% 75%;
-    --secondary-foreground: 25 25% 20%;
+    --secondary-foreground: 217 32.5843% 17.451%;
 
     --muted: 30 20% 90%;
-    --muted-foreground: 25 15% 50%;
+    --muted-foreground: 215 16.318% 46.8627%;
 
-    --accent: 40 70% 80%;
-    --accent-foreground: 25 25% 20%;
+    --accent: 48 96.4912% 88.8235%;
+    --accent-foreground: 217 32.5843% 17.451%;
 
-    --destructive: 0 65% 65%;
+    --destructive: 215 27.907% 16.8627%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 30 20% 85%;
     --input: 30 20% 85%;
-    --ring: 350 60% 70%;
+    --ring: 171 76.9231% 64.3137%;
 
     --radius: 1.25rem;
 
@@ -41,15 +42,16 @@
     --lavender: 270 40% 85%;
     --mint: 150 40% 85%;
     --cream: 40 40% 95%;
-    
+
     /* Soft shadows */
     --shadow-soft: 0 4px 20px hsl(25 25% 20% / 0.08);
     --shadow-card: 0 8px 30px hsl(25 25% 20% / 0.1);
-    
+
     /* Fonts */
     --font-display: 'Nunito', sans-serif;
     --font-heading: 'Nunito', sans-serif;
     --font-body: 'Quicksand', sans-serif;
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .dark {
@@ -64,6 +66,7 @@
 
     --border: 25 15% 25%;
     --input: 25 15% 25%;
+    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
 
