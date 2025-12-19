@@ -4,19 +4,22 @@ import projectIllustration from "@/assets/project-illustration.jpg";
 
 const projects = [
   {
-    title: "LOGO DESIGN",
+    title: "Logo Design",
     image: projectLogo,
     description: "Brand identities & visual marks",
+    color: "bg-cozy-peach",
   },
   {
-    title: "MASCOT MAKER",
+    title: "Mascot Maker",
     image: projectMascot,
     description: "Character creation & design",
+    color: "bg-cozy-mint",
   },
   {
-    title: "ILLUSTRATOR",
+    title: "Illustration",
     image: projectIllustration,
     description: "Digital art & visual stories",
+    color: "bg-cozy-lavender",
   },
 ];
 
@@ -27,9 +30,11 @@ const ProjectsSection = () => {
         {/* Section Title */}
         <div className="mb-12 text-center">
           <h2 className="section-title">
-            Featured Project
+            Featured Projects ✨
           </h2>
-          <div className="mt-4 mx-auto h-1 w-20 bg-gradient-to-r from-primary to-secondary rounded-full" />
+          <p className="mt-3 text-muted-foreground">
+            A glimpse of my creative work
+          </p>
         </div>
 
         {/* Projects Grid */}
@@ -45,20 +50,20 @@ const ProjectsSection = () => {
                 <img 
                   src={project.image} 
                   alt={project.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/20 to-transparent" />
-                
-                {/* Title */}
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h3 className="font-display text-2xl md:text-3xl text-foreground tracking-wide">
-                    {project.title}
-                  </h3>
-                  <p className="mt-1 text-sm text-muted-foreground">
-                    {project.description}
-                  </p>
-                </div>
+                <div className={`absolute inset-0 ${project.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
+              </div>
+              
+              {/* Title */}
+              <div className="p-5">
+                <h3 className="font-heading text-xl font-bold text-card-foreground">
+                  {project.title}
+                </h3>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  {project.description}
+                </p>
               </div>
             </div>
           ))}
