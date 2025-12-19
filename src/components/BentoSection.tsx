@@ -21,7 +21,7 @@ const BentoSection = () => {
                 <img 
                   src={avatar} 
                   alt="Ali Zulfikar avatar" 
-                  className="w-28 h-28 md:w-36 md:h-36 object-contain" 
+                  className="w-48 h-48 md:w-64 md:h-64 object-contain" 
                 />
               </div>
               <div className="text-center md:text-left">
