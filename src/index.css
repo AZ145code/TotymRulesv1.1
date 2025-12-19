@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@300;400;500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 
 @tailwind base;
@@ -7,65 +7,68 @@
 
 @layer base {
   :root {
-    --background: 30 30% 96%;
-    --foreground: 210 40% 98.0392%;
+    --background: 45 100% 98%;
+    --foreground: 25 40% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 173 80.3922% 40%;
+    --card-foreground: 25 40% 20%;
 
-    --popover: 30 30% 98%;
-    --popover-foreground: 222 47.3684% 11.1765%;
+    --popover: 45 100% 98%;
+    --popover-foreground: 25 40% 20%;
 
-    --primary: 171 76.9231% 64.3137%;
+    --primary: 340 75% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 40% 75%;
-    --secondary-foreground: 217 32.5843% 17.451%;
+    --secondary: 200 85% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 30 20% 90%;
-    --muted-foreground: 215 16.318% 46.8627%;
+    --muted: 40 30% 92%;
+    --muted-foreground: 25 20% 45%;
 
-    --accent: 48 96.4912% 88.8235%;
-    --accent-foreground: 217 32.5843% 17.451%;
+    --accent: 45 95% 65%;
+    --accent-foreground: 25 40% 20%;
 
-    --destructive: 215 27.907% 16.8627%;
+    --destructive: 0 80% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 30 20% 85%;
-    --input: 30 20% 85%;
-    --ring: 171 76.9231% 64.3137%;
+    --border: 25 25% 88%;
+    --input: 25 25% 88%;
+    --ring: 340 75% 60%;
 
-    --radius: 1.25rem;
+    --radius: 1.5rem;
 
-    /* Custom design tokens - cozy palette */
-    --peach: 20 80% 85%;
-    --lavender: 270 40% 85%;
-    --mint: 150 40% 85%;
-    --cream: 40 40% 95%;
+    /* Custom design tokens - cartoon palette */
+    --peach: 15 90% 80%;
+    --lavender: 280 60% 80%;
+    --mint: 160 60% 75%;
+    --cream: 45 80% 92%;
+    --sky: 200 85% 75%;
+    --sunshine: 45 95% 70%;
 
-    /* Soft shadows */
-    --shadow-soft: 0 4px 20px hsl(25 25% 20% / 0.08);
-    --shadow-card: 0 8px 30px hsl(25 25% 20% / 0.1);
+    /* Playful shadows */
+    --shadow-soft: 0 4px 20px hsl(340 75% 60% / 0.1);
+    --shadow-card: 0 8px 30px hsl(340 75% 60% / 0.15);
+    --shadow-pop: 6px 6px 0 hsl(25 40% 20% / 0.1);
 
     /* Fonts */
-    --font-display: 'Nunito', sans-serif;
-    --font-heading: 'Nunito', sans-serif;
-    --font-body: 'Quicksand', sans-serif;
+    --font-display: 'Fredoka', sans-serif;
+    --font-heading: 'Baloo 2', cursive;
+    --font-body: 'Fredoka', sans-serif;
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .dark {
-    --background: 25 20% 12%;
-    --foreground: 30 20% 95%;
+    --background: 25 30% 10%;
+    --foreground: 45 50% 95%;
 
-    --card: 25 15% 18%;
-    --card-foreground: 30 20% 95%;
+    --card: 25 25% 15%;
+    --card-foreground: 45 50% 95%;
 
-    --muted: 25 15% 22%;
-    --muted-foreground: 30 15% 65%;
+    --muted: 25 20% 20%;
+    --muted-foreground: 40 20% 65%;
 
-    --border: 25 15% 25%;
-    --input: 25 15% 25%;
+    --border: 25 20% 22%;
+    --input: 25 20% 22%;
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
@@ -82,6 +85,7 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
+    @apply font-bold;
   }
 }
 
@@ -94,76 +98,95 @@
     font-family: var(--font-heading);
   }
 
+  .bento-grid {
+    @apply grid gap-5;
+  }
+
+  .bento-item {
+    @apply bg-card rounded-3xl border-4 border-foreground/10 p-6 transition-all duration-300;
+    box-shadow: var(--shadow-pop);
+  }
+
+  .bento-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
+  }
+
   .card-bento {
-    @apply bg-card text-card-foreground rounded-3xl border-2 border-border p-6 transition-all duration-300;
-    box-shadow: var(--shadow-card);
+    @apply bg-card text-card-foreground rounded-3xl border-4 border-foreground/10 p-6 transition-all duration-300;
+    box-shadow: var(--shadow-pop);
   }
 
   .card-bento:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px hsl(25 25% 20% / 0.12);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
   }
 
   .card-cozy {
-    @apply bg-card rounded-3xl border-2 border-border p-6 transition-all duration-300;
-    box-shadow: var(--shadow-soft);
+    @apply bg-card rounded-3xl border-4 border-foreground/10 p-6 transition-all duration-300;
+    box-shadow: var(--shadow-pop);
   }
 
   .card-cozy:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-card);
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
   }
 
   .card-project {
-    @apply rounded-3xl overflow-hidden border-2 border-border transition-all duration-300 cursor-pointer bg-card;
-    box-shadow: var(--shadow-soft);
+    @apply rounded-3xl overflow-hidden border-4 border-foreground/10 transition-all duration-300 cursor-pointer bg-card;
+    box-shadow: var(--shadow-pop);
   }
 
   .card-project:hover {
-    transform: scale(1.02);
-    box-shadow: var(--shadow-card);
+    transform: scale(1.02) translateY(-4px);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
   }
 
   .skill-item {
-    @apply flex items-center gap-3 text-card-foreground font-medium;
+    @apply flex items-center gap-3 text-card-foreground font-bold text-lg;
   }
 
   .skill-dot {
-    @apply w-2.5 h-2.5 rounded-full bg-primary;
+    @apply w-3 h-3 rounded-full bg-primary;
   }
 
   .section-title {
-    @apply font-heading text-3xl md:text-4xl font-bold text-foreground tracking-tight;
+    @apply font-heading text-4xl md:text-5xl font-extrabold text-foreground tracking-tight;
   }
 
   .hero-title {
-    font-family: var(--font-display);
+    font-family: var(--font-heading);
     @apply text-7xl md:text-[10rem] lg:text-[14rem] font-extrabold leading-[0.9] tracking-tight;
   }
 
   .mascot-card {
-    @apply bg-card rounded-2xl border-2 border-border p-4 transition-all duration-300;
-    box-shadow: var(--shadow-soft);
+    @apply bg-card rounded-3xl border-4 border-foreground/10 p-4 transition-all duration-300;
+    box-shadow: var(--shadow-pop);
   }
 
   .mascot-card:hover {
     @apply border-primary;
-    box-shadow: var(--shadow-card);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
   }
 
   .btn-primary {
-    @apply bg-primary text-primary-foreground font-heading font-bold px-6 py-3 rounded-2xl transition-all duration-300;
+    @apply bg-primary text-primary-foreground font-heading font-bold px-8 py-4 rounded-2xl transition-all duration-300 text-lg;
+    box-shadow: 4px 4px 0 hsl(var(--foreground) / 0.15);
   }
 
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-card);
+    transform: translateY(-2px) translateX(-2px);
+    box-shadow: 6px 6px 0 hsl(var(--foreground) / 0.2);
+  }
+
+  .badge-cartoon {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full font-heading font-bold text-sm;
   }
 }
 
 @layer utilities {
   .animate-float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 4s ease-in-out infinite;
   }
 
   .animate-bounce-soft {
@@ -177,6 +200,10 @@
   .animate-fade-in {
     animation: fade-in 0.8s ease-out forwards;
   }
+
+  .animate-wiggle {
+    animation: wiggle 3s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -184,7 +211,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-15px);
+    transform: translateY(-10px);
   }
 }
 
@@ -193,7 +220,7 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-8px);
+    transform: translateY(-6px);
   }
 }
 
@@ -217,9 +244,18 @@
   }
 }
 
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+
 /* Scrollbar styling */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 ::-webkit-scrollbar-track {
@@ -227,8 +263,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--muted));
-  border-radius: 8px;
+  background: hsl(var(--primary) / 0.4);
+  border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

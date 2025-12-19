@@ -1,31 +1,23 @@
 import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import ProjectsSection from "@/components/ProjectsSection";
-import MascotShowcase from "@/components/MascotShowcase";
-import PhilosophySection from "@/components/PhilosophySection";
+import BentoSection from "@/components/BentoSection";
 import Footer from "@/components/Footer";
+
 const Index = () => {
-  return <main className="min-h-screen bg-zinc-950">
+  return (
+    <main className="min-h-screen bg-background">
       {/* SEO Meta */}
       <title>Ali Zulfikar | Graphic Designer & Illustrator Portfolio</title>
       
       {/* Hero */}
       <HeroSection />
       
-      {/* About / Profile */}
-      <AboutSection />
-      
-      {/* Featured Projects */}
-      <ProjectsSection />
-      
-      {/* Mascot Showcase */}
-      <MascotShowcase />
-      
-      {/* Design Philosophy */}
-      <PhilosophySection />
+      {/* Bento Box Content */}
+      <BentoSection />
       
       {/* Footer */}
       <Footer />
-    </main>;
+    </main>
+  );
 };
+
 export default Index;
