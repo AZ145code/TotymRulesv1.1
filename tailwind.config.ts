@@ -47,26 +47,28 @@ export default {
   				DEFAULT: 'hsl(var(--card))',
   				foreground: 'hsl(var(--card-foreground))'
   			},
-  			cozy: {
-  				peach: 'hsl(var(--peach))',
-  				lavender: 'hsl(var(--lavender))',
-  				mint: 'hsl(var(--mint))',
-  				cream: 'hsl(var(--cream))'
-  			}
+			cozy: {
+				peach: 'hsl(var(--peach))',
+				lavender: 'hsl(var(--lavender))',
+				mint: 'hsl(var(--mint))',
+				cream: 'hsl(var(--cream))',
+				sky: 'hsl(var(--sky))',
+				sunshine: 'hsl(var(--sunshine))'
+			}
   		},
-  		fontFamily: {
-  			display: [
-  				'Nunito',
-  				'sans-serif'
-  			],
-  			heading: [
-  				'Nunito',
-  				'sans-serif'
-  			],
-  			body: [
-  				'Quicksand',
-  				'sans-serif'
-  			],
+		fontFamily: {
+			display: [
+				'Fredoka',
+				'sans-serif'
+			],
+			heading: [
+				'Baloo 2',
+				'cursive'
+			],
+			body: [
+				'Fredoka',
+				'sans-serif'
+			],
   			sans: [
   				'Plus Jakarta Sans',
   				'ui-sans-serif',
