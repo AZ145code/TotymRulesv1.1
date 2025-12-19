@@ -9,7 +9,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-100" 
         style={{ backgroundImage: `url(${heroBg})` }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/70 to-background" />
+        
       </div>
 
       {/* Decorative Shapes */}
