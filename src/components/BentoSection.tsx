@@ -16,22 +16,22 @@ const BentoSection = () => {
           
           {/* Profile Card */}
           <div className="md:col-span-2 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
-            <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex flex-col lg:flex-row items-center gap-6">
               <div className="flex-shrink-0">
                 <img 
                   src={avatar} 
                   alt="Ali Zulfikar avatar" 
-                  className="w-48 h-48 md:w-64 md:h-64 object-contain" 
+                  className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 object-contain" 
                 />
               </div>
-              <div className="text-center md:text-left">
-                <h2 className="text-4xl md:text-5xl font-bold text-white">
+              <div className="text-center lg:text-left">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                   Hey! 👋
                 </h2>
-                <h3 className="text-2xl md:text-3xl font-bold text-teal-400 mt-2">
+                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-teal-400 mt-2">
                   I'm Ali Zulfikar
                 </h3>
-                <p className="mt-3 text-slate-400 leading-relaxed">
+                <p className="mt-3 text-slate-400 leading-relaxed text-sm md:text-base">
                   Graphic designer & illustrator since 2019. Creating cool characters, mascots, and cartoon-style visuals! ⚡
                 </p>
               </div>
