@@ -5,48 +5,46 @@ import mascot4 from "@/assets/mascot-4.png";
 
 const mascots = [
   {
-    name: "CYBER BUNNY",
+    name: "Bunny",
     image: mascot1,
-    personality: "Tech-savvy guardian",
-    color: "from-primary/20 to-secondary/20",
+    personality: "Friendly helper",
+    color: "bg-cozy-peach",
   },
   {
-    name: "NINJA NEKO",
+    name: "Neko",
     image: mascot2,
-    personality: "Stealthy & playful",
-    color: "from-orange-500/20 to-red-500/20",
+    personality: "Playful & curious",
+    color: "bg-cozy-lavender",
   },
   {
-    name: "LUCKY DRAGON",
+    name: "Dragon",
     image: mascot3,
-    personality: "Cheerful fire-breather",
-    color: "from-green-500/20 to-yellow-500/20",
+    personality: "Cheerful buddy",
+    color: "bg-cozy-mint",
   },
   {
-    name: "COSMO BEAR",
+    name: "Bear",
     image: mascot4,
-    personality: "Space explorer",
-    color: "from-blue-500/20 to-purple-500/20",
+    personality: "Cozy explorer",
+    color: "bg-cozy-cream",
   },
 ];
 
 const MascotShowcase = () => {
   return (
     <section className="relative px-6 py-20 md:px-12 lg:px-20 overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 opacity-30">
-        <div className="absolute top-1/4 left-1/4 h-64 w-64 rounded-full bg-primary blur-[100px]" />
-        <div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-secondary blur-[100px]" />
-      </div>
+      {/* Decorative Shapes */}
+      <div className="absolute top-10 right-10 w-32 h-32 rounded-full bg-cozy-peach opacity-30" />
+      <div className="absolute bottom-10 left-10 w-24 h-24 rounded-full bg-cozy-mint opacity-30" />
 
       <div className="relative mx-auto max-w-6xl">
         {/* Section Title */}
         <div className="mb-12 text-center">
           <h2 className="section-title">
-            Mascot Collection
+            Mascot Friends 🐾
           </h2>
-          <p className="mt-4 text-muted-foreground max-w-md mx-auto">
-            A selection of character designs ready to bring your brand to life
+          <p className="mt-3 text-muted-foreground max-w-md mx-auto">
+            Cute characters ready to bring your brand to life
           </p>
         </div>
 
@@ -59,7 +57,7 @@ const MascotShowcase = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Image Container */}
-              <div className={`relative aspect-square rounded-lg overflow-hidden bg-gradient-to-br ${mascot.color}`}>
+              <div className={`relative aspect-square rounded-2xl overflow-hidden ${mascot.color}`}>
                 <img 
                   src={mascot.image} 
                   alt={mascot.name}
@@ -69,7 +67,7 @@ const MascotShowcase = () => {
               
               {/* Info */}
               <div className="mt-4 text-center">
-                <h3 className="font-display text-xl text-foreground tracking-wide">
+                <h3 className="font-heading text-lg font-bold text-foreground">
                   {mascot.name}
                 </h3>
                 <p className="mt-1 text-sm text-muted-foreground">

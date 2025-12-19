@@ -1,20 +1,23 @@
-import { Sparkles, Heart, Zap } from "lucide-react";
+import { Sparkles, Heart, Star } from "lucide-react";
 
 const principles = [
   {
     icon: Sparkles,
-    title: "Cute ≠ Weak",
-    description: "Adorable characters with strong personalities and memorable impact.",
+    title: "Cute & Memorable",
+    description: "Adorable characters with strong personalities that leave lasting impressions.",
+    color: "bg-cozy-peach",
   },
   {
     icon: Heart,
-    title: "Design With Soul",
+    title: "Design With Heart",
     description: "Every creation tells a story and connects emotionally with audiences.",
+    color: "bg-cozy-lavender",
   },
   {
-    icon: Zap,
-    title: "Bold & Playful",
-    description: "Strong shapes and clear expressions that feel alive and dynamic.",
+    icon: Star,
+    title: "Warm & Playful",
+    description: "Friendly designs that feel cozy, inviting, and full of personality.",
+    color: "bg-cozy-mint",
   },
 ];
 
@@ -25,22 +28,24 @@ const PhilosophySection = () => {
         {/* Section Title */}
         <div className="mb-12 text-center">
           <h2 className="section-title">
-            Design Philosophy
+            My Approach 💫
           </h2>
-          <div className="mt-4 mx-auto h-1 w-20 bg-gradient-to-r from-primary to-secondary rounded-full" />
+          <p className="mt-3 text-muted-foreground">
+            What makes my designs special
+          </p>
         </div>
 
         {/* Principles Grid */}
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-3">
           {principles.map((principle, index) => (
             <div 
               key={principle.title}
-              className="card-dark text-center group"
+              className="card-cozy text-center group"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
               {/* Icon */}
-              <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 transition-all duration-300 group-hover:from-primary/40 group-hover:to-secondary/40">
-                <principle.icon className="h-8 w-8 text-primary transition-colors duration-300 group-hover:text-foreground" />
+              <div className={`mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl ${principle.color} transition-transform duration-300 group-hover:scale-110`}>
+                <principle.icon className="h-8 w-8 text-foreground" />
               </div>
 
               {/* Content */}
