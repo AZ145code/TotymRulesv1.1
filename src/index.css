@@ -7,48 +7,48 @@
 
 @layer base {
   :root {
-    --background: 45 100% 98%;
-    --foreground: 25 40% 20%;
+    --background: 220 20% 10%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 25 40% 20%;
+    --card: 220 20% 14%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 45 100% 98%;
-    --popover-foreground: 25 40% 20%;
+    --popover: 220 20% 12%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 340 75% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 175 80% 50%;
+    --primary-foreground: 220 20% 10%;
 
-    --secondary: 200 85% 55%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 260 70% 60%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 40 30% 92%;
-    --muted-foreground: 25 20% 45%;
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 45 95% 65%;
-    --accent-foreground: 25 40% 20%;
+    --accent: 45 90% 55%;
+    --accent-foreground: 220 20% 10%;
 
-    --destructive: 0 80% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 25 25% 88%;
-    --input: 25 25% 88%;
-    --ring: 340 75% 60%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 175 80% 50%;
 
     --radius: 1.5rem;
 
-    /* Custom design tokens - cartoon palette */
-    --peach: 15 90% 80%;
-    --lavender: 280 60% 80%;
-    --mint: 160 60% 75%;
-    --cream: 45 80% 92%;
-    --sky: 200 85% 75%;
-    --sunshine: 45 95% 70%;
+    /* Custom design tokens - dark cool palette */
+    --peach: 175 60% 35%;
+    --lavender: 260 50% 45%;
+    --mint: 175 80% 40%;
+    --cream: 220 15% 18%;
+    --sky: 200 80% 50%;
+    --sunshine: 45 90% 55%;
 
-    /* Playful shadows */
-    --shadow-soft: 0 4px 20px hsl(340 75% 60% / 0.1);
-    --shadow-card: 0 8px 30px hsl(340 75% 60% / 0.15);
-    --shadow-pop: 6px 6px 0 hsl(25 40% 20% / 0.1);
+    /* Cool shadows */
+    --shadow-soft: 0 4px 20px hsl(175 80% 50% / 0.15);
+    --shadow-card: 0 8px 30px hsl(175 80% 50% / 0.2);
+    --shadow-pop: 6px 6px 0 hsl(175 80% 50% / 0.2);
 
     /* Fonts */
     --font-display: 'BBH Bogle', sans-serif;
@@ -58,17 +58,17 @@
   }
 
   .dark {
-    --background: 25 30% 10%;
-    --foreground: 45 50% 95%;
+    --background: 220 20% 8%;
+    --foreground: 210 40% 98%;
 
-    --card: 25 25% 15%;
-    --card-foreground: 45 50% 95%;
+    --card: 220 20% 12%;
+    --card-foreground: 210 40% 98%;
 
-    --muted: 25 20% 20%;
-    --muted-foreground: 40 20% 65%;
+    --muted: 220 15% 18%;
+    --muted-foreground: 215 20% 60%;
 
-    --border: 25 20% 22%;
-    --input: 25 20% 22%;
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
@@ -103,43 +103,44 @@
   }
 
   .bento-item {
-    @apply bg-card rounded-3xl border-4 border-foreground/10 p-6 transition-all duration-300;
+    @apply bg-card rounded-3xl border-2 border-primary/30 p-6 transition-all duration-300;
     box-shadow: var(--shadow-pop);
   }
 
   .bento-item:hover {
     transform: translateY(-4px);
-    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.3);
+    border-color: hsl(var(--primary) / 0.6);
   }
 
   .card-bento {
-    @apply bg-card text-card-foreground rounded-3xl border-4 border-foreground/10 p-6 transition-all duration-300;
+    @apply bg-card text-card-foreground rounded-3xl border-2 border-primary/30 p-6 transition-all duration-300;
     box-shadow: var(--shadow-pop);
   }
 
   .card-bento:hover {
     transform: translateY(-4px);
-    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.3);
   }
 
   .card-cozy {
-    @apply bg-card rounded-3xl border-4 border-foreground/10 p-6 transition-all duration-300;
+    @apply bg-card rounded-3xl border-2 border-primary/30 p-6 transition-all duration-300;
     box-shadow: var(--shadow-pop);
   }
 
   .card-cozy:hover {
     transform: translateY(-4px);
-    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.3);
   }
 
   .card-project {
-    @apply rounded-3xl overflow-hidden border-4 border-foreground/10 transition-all duration-300 cursor-pointer bg-card;
+    @apply rounded-3xl overflow-hidden border-2 border-primary/30 transition-all duration-300 cursor-pointer bg-card;
     box-shadow: var(--shadow-pop);
   }
 
   .card-project:hover {
     transform: scale(1.02) translateY(-4px);
-    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.3);
   }
 
   .skill-item {
@@ -160,13 +161,13 @@
   }
 
   .mascot-card {
-    @apply bg-card rounded-3xl border-4 border-foreground/10 p-4 transition-all duration-300;
+    @apply bg-card rounded-3xl border-2 border-primary/30 p-4 transition-all duration-300;
     box-shadow: var(--shadow-pop);
   }
 
   .mascot-card:hover {
     @apply border-primary;
-    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.2);
+    box-shadow: 8px 8px 0 hsl(var(--primary) / 0.3);
   }
 
   .btn-primary {
