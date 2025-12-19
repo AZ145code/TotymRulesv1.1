@@ -58,15 +58,15 @@ export default {
   		},
 		fontFamily: {
 			display: [
-				'Fredoka',
+				'BBH Bogle',
 				'sans-serif'
 			],
 			heading: [
-				'Baloo 2',
-				'cursive'
+				'BBH Bogle',
+				'sans-serif'
 			],
 			body: [
-				'Fredoka',
+				'BBH Bogle',
 				'sans-serif'
 			],
   			sans: [

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Fredoka:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Bogle:wght@400;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
 
 @tailwind base;
@@ -51,9 +51,9 @@
     --shadow-pop: 6px 6px 0 hsl(25 40% 20% / 0.1);
 
     /* Fonts */
-    --font-display: 'Fredoka', sans-serif;
-    --font-heading: 'Baloo 2', cursive;
-    --font-body: 'Fredoka', sans-serif;
+    --font-display: 'BBH Bogle', sans-serif;
+    --font-heading: 'BBH Bogle', sans-serif;
+    --font-body: 'BBH Bogle', sans-serif;
     --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
