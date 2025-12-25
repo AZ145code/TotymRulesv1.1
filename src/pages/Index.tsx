@@ -4,9 +4,8 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-slate-900">
-      <title>Ali Zulfikar | Graphic Designer & Illustrator Portfolio</title>
-      <HeroSection />
+    <main style={{ backgroundColor: '#EDE3D3', minHeight: '100vh' }}>
+      <title>TOTYM RULES</title>
       <BentoSection />
       <Footer />
     </main>

@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty:wght@400;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,69 +7,71 @@
 
 @layer base {
   :root {
-    --background: 220 20% 10%;
-    --foreground: 210 40% 98%;
+    --background: 36 52% 92%;
+    --foreground: 204 11% 12%;
 
-    --card: 220 20% 14%;
-    --card-foreground: 210 40% 98%;
+    --card: 36 42% 88%;
+    --card-foreground: 204 11% 12%;
 
-    --popover: 220 20% 12%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 36 42% 88%;
+    --popover-foreground: 204 11% 12%;
 
-    --primary: 175 80% 50%;
-    --primary-foreground: 220 20% 10%;
+    --primary: 170 46% 42%;
+    --primary-foreground: 36 52% 92%;
 
-    --secondary: 260 70% 60%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 203 34% 45%;
+    --secondary-foreground: 36 52% 92%;
 
-    --muted: 220 15% 20%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 36 25% 80%;
+    --muted-foreground: 203 15% 35%;
 
-    --accent: 45 90% 55%;
-    --accent-foreground: 220 20% 10%;
+    --accent: 34 80% 60%;
+    --accent-foreground: 36 52% 92%;
 
     --destructive: 0 70% 55%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 36 52% 92%;
 
-    --border: 220 15% 25%;
-    --input: 220 15% 25%;
-    --ring: 175 80% 50%;
+    --border: 36 35% 85%;
+    --input: 36 35% 85%;
+    --ring: 170 46% 42%;
 
     --radius: 1.5rem;
 
-    /* Custom design tokens - dark cool palette */
-    --peach: 175 60% 35%;
-    --lavender: 260 50% 45%;
-    --mint: 175 80% 40%;
-    --cream: 220 15% 18%;
-    --sky: 200 80% 50%;
-    --sunshine: 45 90% 55%;
+    /* Custom design tokens - warm earthy palette */
+    --bg-primary: #EDE3D3;
+    --bg-surface: #E2D2B6;
+    --text-primary: #1E1E1C;
+    --text-secondary: #3A4A50;
+    --color-primary: #2F6F62;
+    --color-primary-soft: #4F8F7A;
+    --color-accent: #E6A15A;
+    --color-highlight: #4A6FB3;
 
-    /* Cool shadows */
-    --shadow-soft: 0 4px 20px hsl(175 80% 50% / 0.15);
-    --shadow-card: 0 8px 30px hsl(175 80% 50% / 0.2);
-    --shadow-pop: 6px 6px 0 hsl(175 80% 50% / 0.2);
+    /* Warm shadows */
+    --shadow-soft: 0 4px 20px #2F6F62 / 0.1;
+    --shadow-card: 0 8px 30px #2F6F62 / 0.15;
+    --shadow-pop: 6px 6px 0 #2F6F62 / 0.15;
 
     /* Fonts */
-    --font-display: 'BBH Hegarty', sans-serif;
-    --font-heading: 'BBH Hegarty', sans-serif;
-    --font-body: 'BBH Hegarty', sans-serif;
-    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --font-display: 'Poppins', sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 
   .dark {
-    --background: 220 20% 8%;
-    --foreground: 210 40% 98%;
+    --background: 36 52% 92%;
+    --foreground: 204 11% 12%;
 
-    --card: 220 20% 12%;
-    --card-foreground: 210 40% 98%;
+    --card: 36 42% 88%;
+    --card-foreground: 204 11% 12%;
 
-    --muted: 220 15% 18%;
-    --muted-foreground: 215 20% 60%;
+    --muted: 36 25% 80%;
+    --muted-foreground: 203 15% 35%;
 
-    --border: 220 15% 22%;
-    --input: 220 15% 22%;
-    --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    --border: 36 35% 85%;
+    --input: 36 35% 85%;
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
 }
 

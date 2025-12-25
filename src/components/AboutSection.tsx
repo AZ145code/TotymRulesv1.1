@@ -17,7 +17,7 @@ const AboutSection = () => {
                 <img 
                   src={avatar} 
                   alt="Ali Zulfikar avatar" 
-                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-card"
+                  className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover"
                 />
               </div>
             </div>

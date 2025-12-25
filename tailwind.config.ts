@@ -58,19 +58,19 @@ export default {
   		},
 		fontFamily: {
 			display: [
-				'BBH Hegarty',
+				'Poppins',
 				'sans-serif'
 			],
 			heading: [
-				'BBH Hegarty',
+				'Poppins',
 				'sans-serif'
 			],
 			body: [
-				'BBH Hegarty',
+				'Inter',
 				'sans-serif'
 			],
   			sans: [
-  				'Plus Jakarta Sans',
+  				'Inter',
   				'ui-sans-serif',
   				'system-ui',
   				'sans-serif',

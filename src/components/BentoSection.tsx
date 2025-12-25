@@ -1,196 +1,296 @@
-import avatar from "@/assets/avatar.png";
-import projectLogo from "@/assets/project-logo.jpg";
-import projectMascot from "@/assets/project-mascot.jpg";
-import projectIllustration from "@/assets/project-illustration.jpg";
-import mascot1 from "@/assets/mascot-1.png";
-import mascot2 from "@/assets/mascot-2.png";
-import mascot3 from "@/assets/mascot-3.png";
-import mascot4 from "@/assets/mascot-4.png";
-import { Sparkles, Heart, Star, Palette, PenTool, Layers } from "lucide-react";
+import Banner from "@/assets/Banner.png";
+import Title1 from "@/assets/Title1.png";
+import temple from "@/assets/temple.png";
+import ruin from "@/assets/ruin.png";
+import chapel from "@/assets/chapel.png";
+import Creature from "@/assets/Creature.png";
+import Worship from "@/assets/Worship.png";
+import Tarot from "@/assets/Tarot.png";
+import Imposter from "@/assets/Imposter.png";
+import Relic from "@/assets/Relic.png";
+import Winning from "@/assets/winning.png";
+import Howto from "@/assets/Howtoplay.png";
+import { CometCard } from "@/components/ui/comet-card";
 
 const BentoSection = () => {
   return (
-    <section className="px-4 md:px-8 lg:px-16 py-12 bg-slate-900">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid gap-5 grid-cols-1 md:grid-cols-4 lg:grid-cols-6">
-          
+    <section className="px-6 md:px-10 lg:px-16 py-12" style={{ backgroundColor: '#ffffffff' }}>
+      <div className="mx-auto max-w-7xl p-6 rounded-3xl" style={{ backgroundColor: 'rgba(255, 255, 255, 0.35)' }}>
+        <div className="grid gap-5 grid-cols-2 md:grid-cols-4 lg:grid-cols-12">
           {/* Profile Card */}
-          <div className="md:col-span-2 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
-            <div className="flex flex-col lg:flex-row items-center gap-6">
-              <div className="flex-shrink-0">
-                <img 
-                  src={avatar} 
-                  alt="Ali Zulfikar avatar" 
-                  className="w-40 h-40 md:w-48 md:h-48 lg:w-64 lg:h-64 object-contain" 
-                />
-              </div>
-              <div className="text-center lg:text-left">
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white">
-                  Hey! 👋
-                </h2>
-                <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-teal-400 mt-2">
-                  I'm Ali Zulfikar
-                </h3>
-                <p className="mt-3 text-slate-400 leading-relaxed text-sm md:text-base">
-                  Graphic designer & illustrator since 2019. Creating cool characters, mascots, and cartoon-style visuals! ⚡
-                </p>
-              </div>
+          <div className="col-span-4 md:col-span-12 lg:col-span-12 rounded-3xl overflow-hidden " style={{}}>
+            <div className="w-full h-full">
+              <img 
+                src={Banner} 
+                alt="Ali Zulfikar avatar" 
+                className="w-full h-full object-cover" 
+              />
             </div>
           </div>
 
-          {/* Skills Card */}
-          <div className="md:col-span-2 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
-            <h3 className="text-3xl font-bold text-white mb-5">
-              Skills ⚡
-            </h3>
-            <ul className="space-y-3">
-              <li className="flex items-center gap-3 text-white font-bold text-lg">
-                <span className="w-3 h-3 rounded-full bg-teal-400" />
-                <span>Graphic Designer</span>
-              </li>
-              <li className="flex items-center gap-3 text-white font-bold text-lg">
-                <span className="w-3 h-3 rounded-full bg-teal-400" />
-                <span>Illustrator</span>
-              </li>
-              <li className="flex items-center gap-3 text-white font-bold text-lg">
-                <span className="w-3 h-3 rounded-full bg-teal-400" />
-                <span>Mascot Design</span>
-              </li>
-              <li className="flex items-center gap-3 text-white font-bold text-lg">
-                <span className="w-3 h-3 rounded-full bg-teal-400" />
-                <span>Cute / Cartoon Style</span>
-              </li>
-              <li className="flex items-center gap-3 text-white font-bold text-lg">
-                <span className="w-3 h-3 rounded-full bg-teal-400" />
-                <span>Logo Design</span>
-              </li>
-            </ul>
-          </div>
+          {/* Description */}
+          <div className="col-span-4 md:col-span-4 lg:col-span-12 rounded-3xl p-6  text-center grid grid-cols-1 lg:grid-cols-12 gap-4" style={{ backgroundColor: '#00000025' }}>
+            <div className="col-span-4 md:col-span-4 lg:col-span-12 flex flex-wrap items-end gap-3 items-center justify-center text-center ">
+              <img 
+                src={Title1}  
+                className="w-25 h-25" 
+              />
+            </div>
+            <div className=" col-span-4 md:col-span-4 lg:col-span-12 flex flex-wrap items-end gap-3 items-center text-center justify-center mb-4">
+              <h3 className="text-l md:text-2xl lg:text-4xl font-black"style={{ color: '#000000ff'}}>
+                SUMMARY OF TOTYM RULES 
+              </h3>
+            </div>
+            
+            
+            <p className=" col-span-4 md:col-span-4 lg:col-span-12 mt-3 leading-relaxed text-sm md:text-base lg:text-1xl font-medium" style={{ color: '#000000ff' }}>
+                  In TOTYM, each player controls a single active creature at a time. On your turn, you draw from your Temple, and build totems on either side of your creature with a combination of tarot cards that create effects or disrupt opponents, and worship cards, which are played face-down. Worship cards may be real or bluffed, and opponents can challenge a completed totem by playing an Imposter card if they believe it is built on false worship.
 
-          {/* Project 1 */}
-          <div className="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 overflow-hidden">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src={projectLogo} alt="Logo Design" className="h-full w-full object-cover" />
-            </div>
-            <div className="p-5">
-              <h3 className="text-xl font-bold text-white">Logo Design</h3>
-              <p className="text-sm text-slate-400 mt-1">Brand identities & visual marks</p>
-            </div>
-          </div>
+When a totem meets its worship requirements and is successfully locked, it brings the creature closer to ascension. Once both sides of a creature are locked, the creature ascends and scores a point.
 
-          {/* Project 2 */}
-          <div className="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 overflow-hidden">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src={projectMascot} alt="Mascot Maker" className="h-full w-full object-cover" />
-            </div>
-            <div className="p-5">
-              <h3 className="text-xl font-bold text-white">Mascot Maker</h3>
-              <p className="text-sm text-slate-400 mt-1">Character creation & design</p>
-            </div>
-          </div>
-
-          {/* Project 3 */}
-          <div className="md:col-span-2 lg:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 overflow-hidden">
-            <div className="aspect-[4/3] overflow-hidden">
-              <img src={projectIllustration} alt="Illustration" className="h-full w-full object-cover" />
-            </div>
-            <div className="p-5">
-              <h3 className="text-xl font-bold text-white">Illustration</h3>
-              <p className="text-sm text-slate-400 mt-1">Digital art & visual stories</p>
-            </div>
-          </div>
-
-          {/* Mascots Section */}
-          <div className="md:col-span-4 lg:col-span-6 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
-            <h3 className="text-3xl font-bold text-white mb-6 text-center">
-              My Mascots 🎨
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-teal-900/50 rounded-2xl p-4 text-center border border-teal-500/20">
-                <img src={mascot1} alt="Bunny" className="w-full aspect-square object-contain rounded-xl mb-3" />
-                <h4 className="text-lg font-bold text-white">Bunny</h4>
-                <p className="text-sm text-slate-400">Friendly helper</p>
-              </div>
-              <div className="bg-purple-900/50 rounded-2xl p-4 text-center border border-purple-500/20">
-                <img src={mascot2} alt="Neko" className="w-full aspect-square object-contain rounded-xl mb-3" />
-                <h4 className="text-lg font-bold text-white">Neko</h4>
-                <p className="text-sm text-slate-400">Playful & curious</p>
-              </div>
-              <div className="bg-blue-900/50 rounded-2xl p-4 text-center border border-blue-500/20">
-                <img src={mascot3} alt="Dragon" className="w-full aspect-square object-contain rounded-xl mb-3" />
-                <h4 className="text-lg font-bold text-white">Dragon</h4>
-                <p className="text-sm text-slate-400">Cheerful buddy</p>
-              </div>
-              <div className="bg-amber-900/50 rounded-2xl p-4 text-center border border-amber-500/20">
-                <img src={mascot4} alt="Bear" className="w-full aspect-square object-contain rounded-xl mb-3" />
-                <h4 className="text-lg font-bold text-white">Bear</h4>
-                <p className="text-sm text-slate-400">Cozy explorer</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Philosophy 1 */}
-          <div className="md:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-teal-900/50 border border-teal-500/30">
-              <Sparkles className="h-8 w-8 text-teal-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Cute & Memorable</h3>
-            <p className="text-slate-400 text-sm">Adorable characters with strong personalities</p>
-          </div>
-
-          {/* Philosophy 2 */}
-          <div className="md:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-purple-900/50 border border-purple-500/30">
-              <Heart className="h-8 w-8 text-purple-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Design With Heart</h3>
-            <p className="text-slate-400 text-sm">Every creation connects emotionally</p>
-          </div>
-
-          {/* Philosophy 3 */}
-          <div className="md:col-span-2 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6 text-center">
-            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-amber-900/50 border border-amber-500/30">
-              <Star className="h-8 w-8 text-amber-400" />
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Warm & Playful</h3>
-            <p className="text-slate-400 text-sm">Friendly designs full of personality</p>
-          </div>
-
-          {/* Software Tools */}
-          <div className="md:col-span-4 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
-            <h3 className="text-3xl font-bold text-white mb-6">
-              Tools I Use 🛠️
-            </h3>
-            <div className="flex flex-wrap gap-4">
-              <div className="bg-teal-900/50 rounded-2xl px-5 py-4 flex items-center gap-3 border border-teal-500/20">
-                <PenTool className="h-6 w-6 text-teal-400" />
-                <span className="font-bold text-white">Adobe Illustrator</span>
-              </div>
-              <div className="bg-blue-900/50 rounded-2xl px-5 py-4 flex items-center gap-3 border border-blue-500/20">
-                <Layers className="h-6 w-6 text-blue-400" />
-                <span className="font-bold text-white">Adobe Photoshop</span>
-              </div>
-              <div className="bg-purple-900/50 rounded-2xl px-5 py-4 flex items-center gap-3 border border-purple-500/20">
-                <Palette className="h-6 w-6 text-purple-400" />
-                <span className="font-bold text-white">Procreate</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Card */}
-          <div className="md:col-span-4 lg:col-span-3 bg-slate-800 rounded-3xl border-2 border-teal-500/30 p-6">
-            <h3 className="text-3xl font-bold text-white mb-4">
-              Let's Connect! 💬
-            </h3>
-            <p className="text-slate-400 mb-6">
-              Have a project in mind? I'd love to hear from you!
+Players must balance deception, timing, and disruption while preventing opponents from completing their own totems. The game continues until a player ascends three creatures or until all other players are eliminated.
             </p>
-            <a 
-              href="mailto:alizulfikar@email.com" 
-              className="inline-flex items-center gap-2 bg-teal-500 text-slate-900 font-bold px-8 py-4 rounded-2xl hover:bg-teal-400 transition-colors"
-            >
-              📧 Send Me an Email
-            </a>
+            <div className="col-span-4 md:col-span-4 lg:col-span-12 flex flex-wrap items-end gap-3 items-center justify-center text-center ">
+              <img 
+                src={Howto}  
+                className="w-25 h-full" 
+              />
+            </div>
+            
+            
+            <div className="bg-gradient-to-b from-[#362e6e] to-[#000000] col-span-4 md:col-span-4 lg:col-span-6 rounded-3xl p-6 transition-all duration-100 hover:shadow-xl hover:rotate-1 hover:-translate-y-2 hover:brightness-110" style={{ backgroundColor: '#ffffffff' }}>
+                <h3 className="text-3xl font-bold mb-4" style={{ color: '#e4cd4fff' }}>
+                  Win Conditions
+                </h3>
+                <p className="mb-6" style={{ color: '#ffffffff' }}>
+                  A player wins the game immediately if they ascend three creatures.
+
+    Alternatively, a player wins if all other players have been eliminated. A player who is forced to draw cards but cannot is immediately eliminated from the game.
+                </p>
+                <img 
+                      src={Winning}  
+                      className="w-25 h-25" 
+                    />
+            </div>
+
+            
+            <div className="col-span-4 md:col-span-4 lg:col-span-6 rounded-3xl p-6 transition-all duration-100 hover:shadow-xl hover:rotate-1 hover:-translate-y-2" style={{ backgroundColor: '#ffffffff' }}>
+                <h3 className="text-3xl font-bold mb-4" style={{ color: '#000000ff' }}>
+                  Core Terminology
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 place-items-center">
+                  {/* Temple */}
+                  <div
+                    className="rounded-2xl px-5 py-4 flex flex-col items-center gap-1 text-center w-full"
+                    style={{ backgroundColor: '#00000021' }}
+                  >
+                    <img 
+                      src={temple}  
+                      className="w-25 h-25" 
+                    />
+                    <span className="font-bold" style={{ color: '#000000ff' }}>
+                      Temple
+                    </span>
+                    <span className="text-xs font-medium opacity-70" style={{ color: '#000000ff' }}>
+                      Your draw pile.
+                    </span>
+                  </div>
+
+                  {/* Ruins */}
+                  <div
+                    className="rounded-2xl px-5 py-4 flex flex-col items-center gap-1 text-center w-full"
+                    style={{ backgroundColor: '#00000021' }}
+                  >
+                    <img 
+                      src={ruin}  
+                      className="w-25 h-25" 
+                    />
+                    <span className="font-bold" style={{ color: '#000000ff' }}>
+                      Ruins
+                    </span>
+                    <span className="text-xs font-medium opacity-70" style={{ color: '#1E1E1C' }}>
+                      Your discard pile.
+                    </span>
+                  </div>
+
+                  {/* Chapel */}
+                  <div
+                    className="md:col-span-1 rounded-2xl px-5 py-4 flex flex-col items-center gap-1 text-center w-full"
+                    style={{ backgroundColor: '#00000021' }}
+                  >
+                    <img 
+                      src={chapel}  
+                      className="w-25 h-25" 
+                    />
+                    <span className="font-bold" style={{ color: '#000000ff' }}>
+                      Chapel
+                    </span>
+                    <span className="text-xs font-medium opacity-70" style={{ color: '#1E1E1C' }}>
+                      Your inactive creature pile.
+                    </span>
+                  </div>
+                </div>
+            </div> 
+
+
+            <div className="col-span-4 md:col-span-4 lg:col-span-12 rounded-3xl p-6 " style={{ backgroundColor: '#ffffffff' }}>
+                <h3 className="text-4xl font-bold mb-4" style={{ color: '#1E1E1C' }}>
+                  CARD TYPES
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 place-items-center">
+                
+                  <div className="md:col-span-1 rounded-2xl px-5 py-10 flex flex-col items-center place-items-center gap-6 h-[500px]" style={{ backgroundColor: "#00000021" }}>
+                    {/* LEFT — CARD */}
+                    <CometCard className="w-[200px]" translateDepth={16} rotateDepth={16}>
+                      <div className="relative aspect-[2.5/3.5] w-full overflow-hidden rounded-2xl">
+                        <img
+                          src={Creature}
+                          alt="Creature"
+                          className="
+                            absolute inset-0
+                            h-full w-full
+                            object-cover
+                            saturate-70
+                            contrast-70
+                          "
+                        />
+                      </div>
+                    </CometCard>
+
+                    {/* RIGHT — TEXT */}
+                    <div className="flex flex-col gap-1 text-left">
+                      <span className="font-bold text-base text-black">
+                        Creature Cards
+                      </span>
+                      <span className="text-xs font-medium opacity-70 text-[#1E1E1C]">
+                        Creatures have their own worship requirements, blessings, and immunities. Creatures are ascended during the game to score points.
+                      </span>
+                    </div>
+                  </div>
+                  <div className="md:col-span-1 rounded-2xl px-5 py-10 flex flex-col items-center place-items-center gap-6 h-[500px]" style={{ backgroundColor: "#00000021" }}>
+                    {/* LEFT — CARD */}
+                    <CometCard className="w-[200px]" translateDepth={16} rotateDepth={16}>
+                      <div className="relative aspect-[2.5/3.5] w-full overflow-hidden rounded-2xl">
+                        <img
+                          src={Worship}
+                          alt="Worship"
+                          className="
+                            absolute inset-0
+                            h-full w-full
+                            object-cover
+                            saturate-70
+                            contrast-70
+                          "
+                        />
+                      </div>
+                    </CometCard>
+
+                    {/* RIGHT — TEXT */}
+                    <div className="flex flex-col gap-1 text-left">
+                      <span className="font-bold text-base text-black">
+                        Worship Cards
+                      </span>
+                      <span className="text-xs font-medium opacity-70 text-[#1E1E1C]">
+                        Worship cards are placed into totems to meet a creature’s worship requirement.
+                      </span>
+                    </div>
+                  </div>
+                  <div className=" md:col-span-1 rounded-2xl px-5 py-10 flex flex-col items-center place-items-center gap-6 h-[500px]" style={{ backgroundColor: "#00000021" }}>
+                    {/* LEFT — CARD */}
+                    <CometCard className="w-[200px]" translateDepth={16} rotateDepth={16}>
+                      <div className="relative aspect-[2.5/3.5] w-full overflow-hidden rounded-2xl">
+                        <img
+                          src={Tarot}
+                          alt="Tarot"
+                          className="
+                            absolute inset-0
+                            h-full w-full
+                            object-cover
+                            saturate-70
+                            contrast-70
+                          "
+                        />
+                      </div>
+                    </CometCard>
+
+                    {/* RIGHT — TEXT */}
+                    <div className="flex flex-col gap-1 text-left">
+                      <span className="font-bold text-base text-black">
+                        Tarot
+                      </span>
+                      <span className="text-xs font-medium opacity-70 text-[#1E1E1C]">
+                        Tarot cards create effects, actions, and disruptions. Tarot cards include Major Arcana (non-suits) and Minor Arcana (suits).
+                      </span>
+                    </div>
+                  </div>
+
+
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 py-10 px-20 gap-5 place-items-center">
+                
+                  <div className="md:col-span-1 rounded-2xl px-5 py-10 flex flex-col items-center place-items-center gap-6 h-[500px]" style={{ backgroundColor: "#00000021" }}>
+                    {/* LEFT — CARD */}
+                    <CometCard className="w-[200px]" translateDepth={16} rotateDepth={16}>
+                      <div className="relative aspect-[2.5/3.5] w-full overflow-hidden rounded-2xl">
+                        <img
+                          src={Imposter}
+                          alt="Imposter"
+                          className="
+                            absolute inset-0
+                            h-full w-full
+                            object-cover
+                            saturate-70
+                            contrast-70
+                          "
+                        />
+                      </div>
+                    </CometCard>
+
+                    {/* RIGHT — TEXT */}
+                    <div className="flex flex-col gap-1 text-left">
+                      <span className="font-bold text-base text-black">
+                        Impostor Cards
+                      </span>
+                      <span className="text-xs font-medium opacity-70 text-[#1E1E1C]">
+                        Imposter cards are used to challenge locked totems when you feel an opponent is bluffing.
+                      </span>
+                    </div>
+                  </div>
+                  <div className="md:col-span-1 rounded-2xl px-5 py-10 flex flex-col items-center place-items-center gap-6 h-[500px]" style={{ backgroundColor: "#00000021" }}>
+                    {/* LEFT — CARD */}
+                    <CometCard className="w-[200px]" translateDepth={16} rotateDepth={16}>
+                      <div className="relative aspect-[2.5/3.5] w-full overflow-hidden rounded-2xl">
+                        <img
+                          src={Relic}
+                          alt="Relic"
+                          className="
+                            absolute inset-0
+                            h-full w-full
+                            object-cover
+                            saturate-70
+                            contrast-70
+                          "
+                        />
+                      </div>
+                    </CometCard>
+
+                    {/* RIGHT — TEXT */}
+                    <div className="flex flex-col gap-1 text-left">
+                      <span className="font-bold text-base text-black">
+                        Relic Cards
+                      </span>
+                      <span className="text-xs font-medium opacity-70 text-[#1E1E1C]">
+                        Relic cards are promotional and collectible cards that are primarily collected outside of booster packs and starter decks. These can optionally be used in place of imposter cards.
+                      </span>
+                    </div>
+                  </div>
+
+
+                </div>
+                
+                    
+            </div>
+
           </div>
 
         </div>
